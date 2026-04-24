@@ -1,0 +1,577 @@
+{
+  "config": {
+    "rushHours": [
+      {
+        "start": "10:10",
+        "end": "11:00"
+      },
+      {
+        "start": "13:30",
+        "end": "14:30"
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": "burger_butcher",
+      "produkt": "Butcher Burger",
+      "produktPris": 75,
+      "kundKategori": "burgare",
+      "station": "grill",
+      "tillagningstid": 8,
+      "beskrivning": "Klassisk burgare med nötkött, dressing och lök.",
+      "sorteringsordning": 1,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        {
+          "namn": "utan dressing",
+          "visasVidRusning": false
+        },
+        {
+          "namn": "utan lök",
+          "visasVidRusning": true
+        },
+        {
+          "namn": "glutenfritt bröd",
+          "visasVidRusning": true
+        }
+      ],
+      "tillägg": [
+        {
+          "namn": "extra kött",
+          "pris": 20,
+          "visasVidRusning": false
+        },
+        {
+          "namn": "extra ost",
+          "pris": 10,
+          "visasVidRusning": false
+        },
+        {
+          "namn": "extra halloumi",
+          "pris": 15,
+          "visasVidRusning": false
+        }
+      ],
+      "tillvalTillbehor": [
+        "side_fries",
+        "side_sweet_potato_fries",
+        "side_salad",
+        "side_chilimayo",
+        "side_ketchup"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": [
+        "gluten",
+        "lök"
+      ],
+      "ingredienser": [
+        "bröd",
+        "nötkött",
+        "dressing",
+        "lök"
+      ]
+    },
+    {
+      "id": "burger_grand",
+      "produkt": "Grand Butcher",
+      "produktPris": 89,
+      "kundKategori": "burgare",
+      "station": "grill",
+      "tillagningstid": 10,
+      "beskrivning": "Större premiumburgare med nötkött, ost, dressing och lök.",
+      "sorteringsordning": 2,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        {
+          "namn": "utan ost",
+          "visasVidRusning": false
+        },
+        {
+          "namn": "utan dressing",
+          "visasVidRusning": false
+        },
+        {
+          "namn": "utan lök",
+          "visasVidRusning": true
+        },
+        {
+          "namn": "glutenfritt bröd",
+          "visasVidRusning": true
+        }
+      ],
+      "tillägg": [
+        {
+          "namn": "extra kött",
+          "pris": 20,
+          "visasVidRusning": false
+        },
+        {
+          "namn": "extra ost",
+          "pris": 10,
+          "visasVidRusning": false
+        },
+        {
+          "namn": "extra halloumi",
+          "pris": 15,
+          "visasVidRusning": false
+        }
+      ],
+      "tillvalTillbehor": [
+        "side_fries",
+        "side_sweet_potato_fries",
+        "side_salad",
+        "side_chilimayo",
+        "side_ketchup"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": [
+        "gluten",
+        "laktos",
+        "lök"
+      ],
+      "ingredienser": [
+        "bröd",
+        "nötkött",
+        "ost",
+        "dressing",
+        "lök"
+      ]
+    },
+    {
+      "id": "burger_cheese",
+      "produkt": "Butcher Cheese",
+      "produktPris": 75,
+      "kundKategori": "burgare",
+      "station": "grill",
+      "tillagningstid": 8,
+      "beskrivning": "Cheeseburgare med nötkött, ost, dressing och lök.",
+      "sorteringsordning": 3,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        {
+          "namn": "utan ost",
+          "visasVidRusning": false
+        },
+        {
+          "namn": "utan dressing",
+          "visasVidRusning": false
+        },
+        {
+          "namn": "utan lök",
+          "visasVidRusning": true
+        },
+        {
+          "namn": "glutenfritt bröd",
+          "visasVidRusning": true
+        }
+      ],
+      "tillägg": [
+        {
+          "namn": "extra kött",
+          "pris": 20,
+          "visasVidRusning": false
+        },
+        {
+          "namn": "extra ost",
+          "pris": 10,
+          "visasVidRusning": false
+        },
+        {
+          "namn": "extra halloumi",
+          "pris": 15,
+          "visasVidRusning": false
+        }
+      ],
+      "tillvalTillbehor": [
+        "side_fries",
+        "side_sweet_potato_fries",
+        "side_salad",
+        "side_chilimayo",
+        "side_ketchup"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": [
+        "gluten",
+        "laktos",
+        "lök"
+      ],
+      "ingredienser": [
+        "bröd",
+        "nötkött",
+        "ost",
+        "dressing",
+        "lök"
+      ]
+    },
+    {
+      "id": "burger_crispy",
+      "produkt": "Crispy Butcher",
+      "produktPris": 75,
+      "kundKategori": "burgare",
+      "station": "tillbehör",
+      "tillagningstid": 7,
+      "beskrivning": "Krispig kycklingburgare med dressing och lök.",
+      "sorteringsordning": 4,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        {
+          "namn": "utan dressing",
+          "visasVidRusning": false
+        },
+        {
+          "namn": "utan lök",
+          "visasVidRusning": true
+        },
+        {
+          "namn": "glutenfritt bröd",
+          "visasVidRusning": true
+        }
+      ],
+      "tillägg": [
+        {
+          "namn": "extra kyckling",
+          "pris": 20,
+          "visasVidRusning": false
+        }
+      ],
+      "tillvalTillbehor": [
+        "side_fries",
+        "side_sweet_potato_fries",
+        "side_salad",
+        "side_chilimayo",
+        "side_ketchup"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": [
+        "gluten",
+        "lök"
+      ],
+      "ingredienser": [
+        "bröd",
+        "kyckling",
+        "dressing",
+        "lök"
+      ]
+    },
+    {
+      "id": "burger_halloumi",
+      "produkt": "Butcherlloumi",
+      "produktPris": 75,
+      "kundKategori": "burgare",
+      "station": "grill",
+      "tillagningstid": 7,
+      "beskrivning": "Vegetarisk burgare med halloumi, dressing och lök.",
+      "sorteringsordning": 5,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        {
+          "namn": "utan dressing",
+          "visasVidRusning": false
+        },
+        {
+          "namn": "utan lök",
+          "visasVidRusning": true
+        },
+        {
+          "namn": "glutenfritt bröd",
+          "visasVidRusning": true
+        }
+      ],
+      "tillägg": [
+        {
+          "namn": "extra ost",
+          "pris": 10,
+          "visasVidRusning": false
+        },
+        {
+          "namn": "extra halloumi",
+          "pris": 15,
+          "visasVidRusning": false
+        }
+      ],
+      "tillvalTillbehor": [
+        "side_fries",
+        "side_sweet_potato_fries",
+        "side_salad",
+        "side_chilimayo",
+        "side_ketchup"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": [
+        "gluten",
+        "laktos",
+        "lök"
+      ],
+      "ingredienser": [
+        "bröd",
+        "halloumi",
+        "dressing",
+        "lök"
+      ]
+    },
+    {
+      "id": "side_fries",
+      "produkt": "Fries",
+      "produktPris": 25,
+      "kundKategori": "tillbehör",
+      "station": "tillbehör",
+      "tillagningstid": 5,
+      "beskrivning": "Klassiska pommes frites.",
+      "sorteringsordning": 1,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        {
+          "namn": "utan salt",
+          "visasVidRusning": false
+        }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "potatis",
+        "salt"
+      ]
+    },
+    {
+      "id": "side_sweet_potato_fries",
+      "produkt": "Sweet Potato Fries",
+      "produktPris": 25,
+      "kundKategori": "tillbehör",
+      "station": "tillbehör",
+      "tillagningstid": 6,
+      "beskrivning": "Pommes på sötpotatis.",
+      "sorteringsordning": 2,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        {
+          "namn": "utan salt",
+          "visasVidRusning": false
+        }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "sötpotatis",
+        "salt"
+      ]
+    },
+    {
+      "id": "side_salad",
+      "produkt": "Crispy Salad",
+      "produktPris": 25,
+      "kundKategori": "tillbehör",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Färdig sallad som serveras direkt.",
+      "sorteringsordning": 3,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "salladsmix",
+        "grönsaker"
+      ]
+    },
+    {
+      "id": "side_chilimayo",
+      "produkt": "Chilimajo",
+      "produktPris": 20,
+      "kundKategori": "tillbehör",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Krämig chilimajonnäs.",
+      "sorteringsordning": 4,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "majonnäs",
+        "chili"
+      ]
+    },
+    {
+      "id": "side_ketchup",
+      "produkt": "Ketchup",
+      "produktPris": 5,
+      "kundKategori": "tillbehör",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Tomatketchup.",
+      "sorteringsordning": 5,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "tomat",
+        "vinäger",
+        "socker"
+      ]
+    },
+    {
+      "id": "drink_cola",
+      "produkt": "Cola",
+      "produktPris": 15,
+      "kundKategori": "dryck",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Coladryck.",
+      "sorteringsordning": 1,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        {
+          "namn": "utan is",
+          "visasVidRusning": false
+        }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "läskkoncentrat",
+        "kolsyrat vatten"
+      ]
+    },
+    {
+      "id": "drink_fanta",
+      "produkt": "Fanta",
+      "produktPris": 15,
+      "kundKategori": "dryck",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Apelsinläsk.",
+      "sorteringsordning": 2,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        {
+          "namn": "utan is",
+          "visasVidRusning": false
+        }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "läskkoncentrat",
+        "kolsyrat vatten"
+      ]
+    },
+    {
+      "id": "drink_sprite",
+      "produkt": "Sprite",
+      "produktPris": 15,
+      "kundKategori": "dryck",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Citrusläsk.",
+      "sorteringsordning": 3,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        {
+          "namn": "utan is",
+          "visasVidRusning": false
+        }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "läskkoncentrat",
+        "kolsyrat vatten"
+      ]
+    },
+    {
+      "id": "drink_ramlosa",
+      "produkt": "Ramlösa",
+      "produktPris": 15,
+      "kundKategori": "dryck",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Kolsyrat vatten.",
+      "sorteringsordning": 4,
+      "bild": "",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        {
+          "namn": "utan is",
+          "visasVidRusning": false
+        }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": [
+        "kolsyrat vatten"
+      ]
+    }
+  ]
+}
