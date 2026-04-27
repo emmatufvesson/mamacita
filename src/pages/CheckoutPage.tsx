@@ -4,7 +4,6 @@ import { useOrders } from "@/context/OrderContext";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const CheckoutPage = () => {
@@ -32,7 +31,6 @@ const CheckoutPage = () => {
   if (confirmed && orderNumber !== null) {
     return (
       <div className="min-h-screen flex flex-col bg-background">
-        <Header />
         <div className="flex-1 flex flex-col items-center justify-center p-6 text-center gap-4">
           <h2 className="text-2xl font-bold text-foreground">Tack för betalning, din order förbereds nu</h2>
           <p className="text-muted-foreground">Din order beräknas ta ca 10 minuter</p>
@@ -49,7 +47,6 @@ const CheckoutPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Header />
       <div className="flex-1 p-4 max-w-md mx-auto w-full">
         <h2 className="text-xl font-bold text-foreground mb-6">Betalning</h2>
 

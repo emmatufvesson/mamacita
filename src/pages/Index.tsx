@@ -1,5 +1,4 @@
 import { useState, useMemo, useEffect } from "react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CategoryBar from "@/components/CategoryBar";
 import ProductGrid from "@/components/ProductGrid";
@@ -222,7 +221,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Header />
       <CategoryBar selected={category} onSelect={(c) => { setCategory(c); setSelectedProductId(null); }} />
 
       {rush && step === "select" && (

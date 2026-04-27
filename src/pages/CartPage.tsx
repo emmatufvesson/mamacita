@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { findProduct } from "@/data/menu";
 import { Button } from "@/components/ui/button";
 import { Minus, Plus, Trash2 } from "lucide-react";
-import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const CartPage = () => {
@@ -13,7 +12,6 @@ const CartPage = () => {
   if (cartItems.length === 0) {
     return (
       <div className="min-h-screen flex flex-col bg-background">
-        <Header />
         <div className="flex-1 flex flex-col items-center justify-center gap-4 p-6">
           <p className="text-muted-foreground text-lg">Din kundkorg är tom</p>
           <Button onClick={() => navigate("/")}>Lägg till produkter</Button>
@@ -25,7 +23,6 @@ const CartPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
-      <Header />
       <div className="flex-1 p-4 max-w-lg mx-auto w-full">
         <h2 className="text-xl font-bold text-foreground mb-4">Din kundkorg</h2>
 
