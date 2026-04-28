@@ -1,13 +1,28 @@
 import { useOrders } from "@/context/OrderContext";
+import { findProduct } from "@/data/menu";
+import type { Order } from "@/types/order";
 
 const PickupScreen = () => {
   const { orders } = useOrders();
 
+  const hasGrillItems = (order: Order) =>
+    order.items.some((item) => findProduct(item.productId)?.station === "grill");
+
+  const hasSideItems = (order: Order) =>
+    order.items.some((item) => {
+      const mainProduct = findProduct(item.productId);
+      const sideProduct = findProduct(item.sideId);
+      return mainProduct?.station === "tillbehör" || sideProduct?.station === "tillbehör";
+    });
+
+  const isReadyForPickup = (order: Order) =>
+    (!hasGrillItems(order) || order.grillDone) && (!hasSideItems(order) || order.sidesDone);
+
   const activeOrders = orders.filter((o) => !o.pickedUp);
   const sorted = [...activeOrders].sort((a, b) => a.createdAt - b.createdAt);
 
-  const preparing = sorted.filter((o) => !(o.grillDone && o.sidesDone && o.servingDone));
-  const ready = sorted.filter((o) => o.grillDone && o.sidesDone && o.servingDone);
+  const preparing = sorted.filter((o) => !isReadyForPickup(o) || !o.servingDone);
+  const ready = sorted.filter((o) => isReadyForPickup(o) && o.servingDone);
 
   return (
     <div className="min-h-screen bg-background p-6">
