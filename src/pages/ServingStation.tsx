@@ -4,14 +4,28 @@ import OrderTimer from "@/components/OrderTimer";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Clock } from "lucide-react";
+import type { Order } from "@/types/order";
 
 const ServingStation = () => {
   const { orders, markServingReady, markPickedUp } = useOrders();
 
+  const hasGrillItems = (order: Order) =>
+    order.items.some((item) => findProduct(item.productId)?.station === "grill");
+
+  const hasSideItems = (order: Order) =>
+    order.items.some((item) => {
+      const mainProduct = findProduct(item.productId);
+      const sideProduct = findProduct(item.sideId);
+      return mainProduct?.station === "tillbehör" || sideProduct?.station === "tillbehör";
+    });
+
+  const isReadyForPickup = (order: Order) =>
+    (!hasGrillItems(order) || order.grillDone) && (!hasSideItems(order) || order.sidesDone);
+
   const activeOrders = orders.filter((o) => !o.pickedUp);
   const sorted = [...activeOrders].sort((a, b) => {
-    const aDone = a.grillDone && a.sidesDone ? 1 : 0;
-    const bDone = b.grillDone && b.sidesDone ? 1 : 0;
+    const aDone = isReadyForPickup(a) ? 1 : 0;
+    const bDone = isReadyForPickup(b) ? 1 : 0;
     if (aDone !== bDone) return bDone - aDone;
     return a.createdAt - b.createdAt;
   });
@@ -38,6 +52,8 @@ const ServingStation = () => {
           </TableHeader>
           <TableBody>
             {sorted.map((order) => {
+              const grillItems = hasGrillItems(order);
+              const sideItems = hasSideItems(order);
               const productNames = order.items.map((item) => {
                 const p = findProduct(item.productId);
                 return p ? `${item.quantity}× ${p.produkt}` : "—";
@@ -50,7 +66,7 @@ const ServingStation = () => {
                 const d = findProduct(item.drinkId);
                 return d ? `${d.produkt}${item.noIce ? " (utan is)" : ""}` : null;
               }).filter(Boolean).join(", ") || "—";
-              const allStationsDone = order.grillDone && order.sidesDone;
+              const allStationsDone = isReadyForPickup(order);
 
               return (
                 <TableRow key={order.id}>
@@ -58,13 +74,13 @@ const ServingStation = () => {
                   <TableCell>{drinkNames}</TableCell>
                   <TableCell>
                     <div className="flex items-center gap-2">
-                      <StatusIcon done={order.grillDone} />
+                      <StatusIcon done={order.grillDone || !grillItems} />
                       <span>{productNames}</span>
                     </div>
                   </TableCell>
                   <TableCell>
                     <div className="flex items-center gap-2">
-                      <StatusIcon done={order.sidesDone} />
+                      <StatusIcon done={order.sidesDone || !sideItems} />
                       <span>{sideNames}</span>
                     </div>
                   </TableCell>

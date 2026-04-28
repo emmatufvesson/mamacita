@@ -25,11 +25,24 @@ const SidesStation = () => {
       .filter((o) => !o.pickedUp && !o.sidesDone)
       .forEach((order) => {
         order.items.forEach((item, idx) => {
+          const mainProduct = findProduct(item.productId);
+          if (mainProduct?.station === "tillbehör") {
+            out.push({
+              key: `${order.id}-main-${idx}`,
+              orderId: order.id,
+              orderNumber: order.orderNumber,
+              createdAt: order.createdAt,
+              sideName: mainProduct.produkt,
+              quantity: item.quantity,
+              grillDone: order.grillDone,
+            });
+          }
+
           if (!item.sideId) return;
           const side = findProduct(item.sideId);
           if (side?.station !== "tillbehör") return;
           out.push({
-            key: `${order.id}-${idx}`,
+            key: `${order.id}-side-${idx}`,
             orderId: order.id,
             orderNumber: order.orderNumber,
             createdAt: order.createdAt,
