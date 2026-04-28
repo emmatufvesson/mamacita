@@ -1,7 +1,6 @@
 import { useCart, itemPrice } from "@/context/CartContext";
 import { useNavigate } from "react-router-dom";
 import { findProduct } from "@/data/menu";
-import { Button } from "@/components/ui/button";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import Footer from "@/components/Footer";
 
@@ -14,7 +13,7 @@ const CartPage = () => {
       <div className="min-h-screen flex flex-col bg-background">
         <div className="flex-1 flex flex-col items-center justify-center gap-4 p-6">
           <p className="text-muted-foreground text-lg">Din kundkorg är tom</p>
-          <Button onClick={() => navigate("/")}>Lägg till produkter</Button>
+          <button onClick={() => navigate("/")} className="touch-btn">Lägg till produkter</button>
         </div>
         <Footer />
       </div>
@@ -38,7 +37,7 @@ const CartPage = () => {
                     <p className="font-semibold text-foreground">{item.productName}</p>
                     <p className="text-sm text-muted-foreground">{item.productPrice} kr</p>
                   </div>
-                  <button onClick={() => removeFromCart(index)} className="text-destructive p-1">
+                  <button onClick={() => removeFromCart(index)} className="touch-btn !h-7 !w-7 !p-0">
                     <Trash2 size={16} />
                   </button>
                 </div>
@@ -65,7 +64,7 @@ const CartPage = () => {
                 <div className="flex items-center gap-3 mt-3">
                   <button
                     onClick={() => updateQuantity(index, item.quantity - 1)}
-                    className="w-7 h-7 flex items-center justify-center rounded border border-border hover:bg-muted"
+                    className="touch-btn !h-7 !w-7 !p-0"
                     disabled={item.quantity <= 1}
                   >
                     <Minus size={14} />
@@ -73,7 +72,7 @@ const CartPage = () => {
                   <span className="font-medium text-foreground w-6 text-center">{item.quantity}</span>
                   <button
                     onClick={() => updateQuantity(index, item.quantity + 1)}
-                    className="w-7 h-7 flex items-center justify-center rounded border border-border hover:bg-muted"
+                    className="touch-btn !h-7 !w-7 !p-0"
                   >
                     <Plus size={14} />
                   </button>
@@ -92,19 +91,18 @@ const CartPage = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <Button onClick={() => navigate("/checkout")} className="w-full">
+          <button onClick={() => navigate("/checkout")} className="touch-btn w-full">
             Gå till betalning
-          </Button>
-          <Button variant="outline" onClick={() => navigate("/")} className="w-full">
+          </button>
+          <button onClick={() => navigate("/")} className="touch-btn w-full">
             Lägg till fler produkter
-          </Button>
-          <Button
-            variant="ghost"
+          </button>
+          <button
             onClick={() => { clearCart(); navigate("/"); }}
-            className="w-full text-destructive hover:text-destructive"
+            className="touch-btn w-full"
           >
             Avbryt beställning
-          </Button>
+          </button>
         </div>
       </div>
       <Footer />

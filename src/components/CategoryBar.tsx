@@ -11,10 +11,10 @@ const CategoryBar = ({ selected, onSelect }: CategoryBarProps) => (
       <button
         key={cat}
         onClick={() => onSelect(cat)}
-        className={`px-6 py-2 rounded font-medium text-sm transition-colors ${
+        className={`touch-btn min-w-28 ${
           selected === cat
-            ? "bg-category-active text-category-active-foreground"
-            : "bg-category-inactive text-category-inactive-foreground hover:opacity-80"
+            ? "touch-btn-selected"
+            : "bg-card text-primary"
         }`}
       >
         {cat}

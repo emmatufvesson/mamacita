@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useCart } from "@/context/CartContext";
 import { useOrders } from "@/context/OrderContext";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Footer from "@/components/Footer";
 
@@ -36,9 +35,9 @@ const CheckoutPage = () => {
           <p className="text-muted-foreground">Din order beräknas ta ca 10 minuter</p>
           <p className="text-xl font-semibold text-foreground">Ditt ordernr är #{orderNumber}</p>
           <p className="text-muted-foreground italic">Smaklig måltid och varmt välkommen åter</p>
-          <Button onClick={() => navigate("/")} className="mt-4">
+          <button onClick={() => navigate("/")} className="touch-btn mt-4">
             Tillbaka till menyn
-          </Button>
+          </button>
         </div>
         <Footer />
       </div>
@@ -58,7 +57,7 @@ const CheckoutPage = () => {
         <div className="mb-6">
           <p className="text-sm font-medium text-foreground mb-3">Välj betalsätt</p>
           <div className="flex flex-col gap-2">
-            <label className="flex items-center gap-3 border border-border rounded-lg p-3 cursor-pointer hover:bg-muted transition-colors">
+            <label className="flex items-center gap-3 border-2 border-border rounded-lg p-3 cursor-pointer bg-card">
               <input
                 type="radio"
                 name="payment"
@@ -68,7 +67,7 @@ const CheckoutPage = () => {
               />
               <span className="text-foreground">Kort</span>
             </label>
-            <label className="flex items-center gap-3 border border-border rounded-lg p-3 cursor-pointer hover:bg-muted transition-colors">
+            <label className="flex items-center gap-3 border-2 border-border rounded-lg p-3 cursor-pointer bg-card">
               <input
                 type="radio"
                 name="payment"
@@ -91,12 +90,12 @@ const CheckoutPage = () => {
         </div>
 
         <div className="flex flex-col gap-2">
-          <Button onClick={handlePay} className="w-full">
+          <button onClick={handlePay} className="touch-btn w-full">
             Betala {cartTotal} kr
-          </Button>
-          <Button variant="outline" onClick={() => navigate("/cart")} className="w-full">
+          </button>
+          <button onClick={() => navigate("/cart")} className="touch-btn w-full">
             Tillbaka till kundkorgen
-          </Button>
+          </button>
         </div>
       </div>
       <Footer />

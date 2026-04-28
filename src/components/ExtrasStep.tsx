@@ -35,10 +35,10 @@ const ExtrasStep = ({ addons, selected, onChange, onContinue, onSkip, onCancel }
           <button
             key={addon.namn}
             onClick={() => toggle(addon.namn)}
-            className={`w-full text-left px-3 py-2 rounded text-sm flex justify-between transition-colors ${
+            className={`w-full text-left px-3 py-2 rounded text-sm flex justify-between border-2 ${
               selected.includes(addon.namn)
-                ? "bg-selected text-selected-foreground"
-                : "bg-muted text-foreground hover:bg-accent"
+                ? "border-primary bg-selected text-selected-foreground"
+                : "border-border bg-card text-foreground"
             }`}
           >
             <span>{addon.namn}</span>

@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 10%;
+    --background: 0 0% 93%;
+    --foreground: 182 20% 16%;
 
     --card: 0 0% 100%;
     --card-foreground: 0 0% 10%;
@@ -17,40 +17,40 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
 
-    --primary: 0 0% 15%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 182 31% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 15%;
+    --secondary: 0 0% 100%;
+    --secondary-foreground: 182 31% 28%;
 
-    --muted: 0 0% 94%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 182 12% 34%;
 
-    --accent: 0 0% 92%;
-    --accent-foreground: 0 0% 15%;
+    --accent: 182 18% 90%;
+    --accent-foreground: 182 31% 28%;
 
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
-    --ring: 0 0% 15%;
+    --border: 182 15% 70%;
+    --input: 182 15% 70%;
+    --ring: 182 31% 40%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --selected: 145 50% 42%;
+    --selected: 182 31% 40%;
     --selected-foreground: 0 0% 100%;
 
-    --header-bg: 0 0% 20%;
+    --header-bg: 182 31% 40%;
     --header-foreground: 0 0% 98%;
 
-    --footer-bg: 0 0% 94%;
-    --footer-foreground: 0 0% 40%;
+    --footer-bg: 0 0% 93%;
+    --footer-foreground: 182 12% 34%;
 
-    --category-active: 0 0% 15%;
+    --category-active: 182 31% 40%;
     --category-active-foreground: 0 0% 98%;
-    --category-inactive: 0 0% 88%;
-    --category-inactive-foreground: 0 0% 30%;
+    --category-inactive: 0 0% 100%;
+    --category-inactive-foreground: 182 31% 28%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -70,5 +70,21 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@layer components {
+  .touch-btn {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-primary bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground;
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  .touch-btn:disabled {
+    @apply opacity-100;
+  }
+
+  .touch-btn-selected {
+    @apply border-primary bg-primary text-primary-foreground ring-2 ring-primary;
   }
 }

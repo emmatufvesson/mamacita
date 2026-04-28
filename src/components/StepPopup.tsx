@@ -16,21 +16,21 @@ const StepPopup = ({ title, children, onContinue, onSkip, onCancel }: StepPopupP
       <div className="flex gap-3 justify-end flex-wrap">
         <button
           onClick={onCancel}
-          className="px-4 py-2 rounded border border-border text-foreground text-sm hover:bg-muted transition-colors"
+          className="touch-btn"
         >
           Avbryt
         </button>
         {onSkip && (
           <button
             onClick={onSkip}
-            className="px-4 py-2 rounded border border-border text-foreground text-sm hover:bg-muted transition-colors"
+            className="touch-btn"
           >
             Hoppa över
           </button>
         )}
         <button
           onClick={onContinue}
-          className="px-4 py-2 rounded bg-primary text-primary-foreground text-sm hover:opacity-80 transition-colors"
+          className="touch-btn"
         >
           Fortsätt
         </button>

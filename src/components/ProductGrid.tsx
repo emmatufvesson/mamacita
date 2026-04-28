@@ -27,14 +27,19 @@ const ProductGrid = ({ category, selectedProductId, onSelect }: ProductGridProps
         <button
           key={product.id}
           onClick={() => onSelect(product.id)}
-          className={`rounded border-2 p-3 text-left transition-all ${
+          className={`rounded-lg border-2 p-3 text-left bg-card ${
             selectedProductId === product.id
-              ? "border-selected bg-selected/10 ring-2 ring-selected"
-              : "border-border bg-card hover:border-muted-foreground"
+              ? "border-primary ring-2 ring-primary"
+              : "border-border"
           }`}
         >
-          <div className="aspect-square bg-muted rounded mb-2 flex items-center justify-center text-muted-foreground text-xs">
-            Bild
+          <div className="aspect-square rounded-md mb-3 overflow-hidden border border-border bg-muted">
+            <img
+              src={product.bild}
+              alt={product.produkt}
+              loading="lazy"
+              className="h-full w-full object-cover"
+            />
           </div>
           <p className="font-medium text-sm text-foreground">{product.produkt}</p>
           <p className="text-sm text-muted-foreground">{product.produktPris} kr</p>

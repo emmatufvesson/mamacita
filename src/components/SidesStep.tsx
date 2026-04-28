@@ -35,10 +35,10 @@ const SidesStep = ({ availableIds, selected, onChange, onContinue, onSkip, onCan
           <button
             key={s.id}
             onClick={() => onChange(selected === s.id ? null : s.id)}
-            className={`w-full text-left px-3 py-2 rounded text-sm flex justify-between transition-colors ${
+            className={`w-full text-left px-3 py-2 rounded text-sm flex justify-between border-2 ${
               selected === s.id
-                ? "bg-selected text-selected-foreground"
-                : "bg-muted text-foreground hover:bg-accent"
+                ? "border-primary bg-selected text-selected-foreground"
+                : "border-border bg-card text-foreground"
             }`}
           >
             <span>{s.produkt}</span>

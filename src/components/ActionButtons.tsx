@@ -9,21 +9,21 @@ const ActionButtons = ({ onCustomize, onContinue, onCancel, hasSelection }: Acti
   <div className="flex gap-3 justify-center p-4">
     <button
       onClick={onCancel}
-      className="px-5 py-2 rounded border border-border text-foreground text-sm hover:bg-muted transition-colors"
+      className="touch-btn"
     >
       Avbryt
     </button>
     <button
       disabled={!hasSelection}
       onClick={onCustomize}
-      className="px-5 py-2 rounded bg-secondary text-secondary-foreground text-sm disabled:opacity-40 hover:opacity-80 transition-colors"
+      className="touch-btn"
     >
       Gör anpassningar
     </button>
     <button
       disabled={!hasSelection}
       onClick={onContinue}
-      className="px-5 py-2 rounded bg-primary text-primary-foreground text-sm disabled:opacity-40 hover:opacity-80 transition-colors"
+      className="touch-btn"
     >
       Fortsätt
     </button>

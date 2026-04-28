@@ -21,7 +21,7 @@
       "tillagningstid": 8,
       "beskrivning": "Klassisk burgare med nötkött, dressing och lök.",
       "sorteringsordning": 1,
-      "bild": "",
+      "bild": "/produktbilder/01_butcher-burger_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": true,
       "anpassningar": [
@@ -88,7 +88,7 @@
       "tillagningstid": 10,
       "beskrivning": "Större premiumburgare med nötkött, ost, dressing och lök.",
       "sorteringsordning": 2,
-      "bild": "",
+      "bild": "/produktbilder/02_grand-butcher_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": false,
       "anpassningar": [
@@ -161,7 +161,7 @@
       "tillagningstid": 8,
       "beskrivning": "Cheeseburgare med nötkött, ost, dressing och lök.",
       "sorteringsordning": 3,
-      "bild": "",
+      "bild": "/produktbilder/03_butcher-cheese_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": false,
       "anpassningar": [
@@ -234,7 +234,7 @@
       "tillagningstid": 7,
       "beskrivning": "Krispig kycklingburgare med dressing och lök.",
       "sorteringsordning": 4,
-      "bild": "",
+      "bild": "/produktbilder/04_crispy-butcher_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": true,
       "anpassningar": [
@@ -291,7 +291,7 @@
       "tillagningstid": 7,
       "beskrivning": "Vegetarisk burgare med halloumi, dressing och lök.",
       "sorteringsordning": 5,
-      "bild": "",
+      "bild": "/produktbilder/05_butcherlloumi_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": true,
       "anpassningar": [
@@ -354,7 +354,7 @@
       "tillagningstid": 5,
       "beskrivning": "Klassiska pommes frites.",
       "sorteringsordning": 1,
-      "bild": "",
+      "bild": "/produktbilder/10_fries_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": true,
       "anpassningar": [
@@ -381,7 +381,7 @@
       "tillagningstid": 6,
       "beskrivning": "Pommes på sötpotatis.",
       "sorteringsordning": 2,
-      "bild": "",
+      "bild": "/produktbilder/11_sweet-potato-fries_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": false,
       "anpassningar": [
@@ -408,7 +408,7 @@
       "tillagningstid": 0,
       "beskrivning": "Färdig sallad som serveras direkt.",
       "sorteringsordning": 3,
-      "bild": "",
+      "bild": "/produktbilder/13_crispy-salad_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": true,
       "anpassningar": [],
@@ -430,7 +430,7 @@
       "tillagningstid": 0,
       "beskrivning": "Krämig chilimajonnäs.",
       "sorteringsordning": 4,
-      "bild": "",
+      "bild": "/produktbilder/14_chilimajo_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": false,
       "anpassningar": [],
@@ -452,7 +452,7 @@
       "tillagningstid": 0,
       "beskrivning": "Tomatketchup.",
       "sorteringsordning": 5,
-      "bild": "",
+      "bild": "/produktbilder/12_ketchup_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": false,
       "anpassningar": [],
@@ -475,7 +475,7 @@
       "tillagningstid": 0,
       "beskrivning": "Coladryck.",
       "sorteringsordning": 1,
-      "bild": "",
+      "bild": "/produktbilder/06_coca-cola_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": true,
       "anpassningar": [
@@ -502,7 +502,7 @@
       "tillagningstid": 0,
       "beskrivning": "Apelsinläsk.",
       "sorteringsordning": 2,
-      "bild": "",
+      "bild": "/produktbilder/07_fanta_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": false,
       "anpassningar": [
@@ -529,7 +529,7 @@
       "tillagningstid": 0,
       "beskrivning": "Citrusläsk.",
       "sorteringsordning": 3,
-      "bild": "",
+      "bild": "/produktbilder/08_sprite_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": false,
       "anpassningar": [
@@ -556,7 +556,7 @@
       "tillagningstid": 0,
       "beskrivning": "Kolsyrat vatten.",
       "sorteringsordning": 4,
-      "bild": "",
+      "bild": "/produktbilder/09_ramlosa_1x1_512.jpg",
       "aktiv": true,
       "aktivRusning": true,
       "anpassningar": [

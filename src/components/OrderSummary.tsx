@@ -77,7 +77,7 @@ const OrderSummary = ({
       <div className="mb-2">
         <div className="flex justify-between items-center mb-1">
           <span className="text-xs font-medium text-muted-foreground">Anpassningar</span>
-          <button onClick={onAddCustomization} className="text-xs text-primary underline">+ Lägg till</button>
+          <button onClick={onAddCustomization} className="touch-btn px-3 py-1 text-xs">+ Lägg till</button>
         </div>
         {order.customizations.length === 0 ? (
           <p className="text-xs text-muted-foreground italic">Inga anpassningar</p>
@@ -85,7 +85,7 @@ const OrderSummary = ({
           order.customizations.map((name) => (
             <div key={name} className="flex justify-between text-sm">
               <span>{name}</span>
-              <button onClick={() => onRemoveCustomization(name)} className="text-destructive text-xs">Ta bort</button>
+              <button onClick={() => onRemoveCustomization(name)} className="touch-btn px-3 py-1 text-xs">Ta bort</button>
             </div>
           ))
         )}
@@ -95,7 +95,7 @@ const OrderSummary = ({
       <div className="mb-2">
         <div className="flex justify-between items-center mb-1">
           <span className="text-xs font-medium text-muted-foreground">Tillägg</span>
-          <button onClick={onAddExtra} className="text-xs text-primary underline">+ Lägg till</button>
+          <button onClick={onAddExtra} className="touch-btn px-3 py-1 text-xs">+ Lägg till</button>
         </div>
         {order.extras.length === 0 ? (
           <p className="text-xs text-muted-foreground italic">Inga tillägg</p>
@@ -103,7 +103,7 @@ const OrderSummary = ({
           order.extras.map((name) => (
             <div key={name} className="flex justify-between text-sm">
               <span>{name} (+{extraPrice(name)} kr)</span>
-              <button onClick={() => onRemoveExtra(name)} className="text-destructive text-xs">Ta bort</button>
+              <button onClick={() => onRemoveExtra(name)} className="touch-btn px-3 py-1 text-xs">Ta bort</button>
             </div>
           ))
         )}
@@ -113,12 +113,12 @@ const OrderSummary = ({
       <div className="mb-2">
         <div className="flex justify-between items-center mb-1">
           <span className="text-xs font-medium text-muted-foreground">Tillbehör</span>
-          <button onClick={onAddSide} className="text-xs text-primary underline">+ Lägg till</button>
+          <button onClick={onAddSide} className="touch-btn px-3 py-1 text-xs">+ Lägg till</button>
         </div>
         {orderSide ? (
           <div className="flex justify-between text-sm">
             <span>{orderSide.produkt} (+{orderSide.produktPris} kr)</span>
-            <button onClick={onRemoveSide} className="text-destructive text-xs">Ta bort</button>
+            <button onClick={onRemoveSide} className="touch-btn px-3 py-1 text-xs">Ta bort</button>
           </div>
         ) : (
           <p className="text-xs text-muted-foreground italic">Inget tillbehör</p>
@@ -129,12 +129,12 @@ const OrderSummary = ({
       <div className="mb-4">
         <div className="flex justify-between items-center mb-1">
           <span className="text-xs font-medium text-muted-foreground">Dryck</span>
-          <button onClick={onAddDrink} className="text-xs text-primary underline">+ Lägg till</button>
+          <button onClick={onAddDrink} className="touch-btn px-3 py-1 text-xs">+ Lägg till</button>
         </div>
         {orderDrink ? (
           <div className="flex justify-between text-sm">
             <span>{orderDrink.produkt} (+{orderDrink.produktPris} kr){order.noIce ? " (utan is)" : ""}</span>
-            <button onClick={onRemoveDrink} className="text-destructive text-xs">Ta bort</button>
+            <button onClick={onRemoveDrink} className="touch-btn px-3 py-1 text-xs">Ta bort</button>
           </div>
         ) : (
           <p className="text-xs text-muted-foreground italic">Ingen dryck</p>
@@ -156,13 +156,13 @@ const OrderSummary = ({
       )}
 
       <div className="flex flex-col gap-2">
-        <button onClick={handleGoToCart} className="w-full px-4 py-2 rounded bg-primary text-primary-foreground text-sm hover:opacity-80 transition-colors">
+        <button onClick={handleGoToCart} className="touch-btn w-full">
           Lägg i kundkorg & gå till kassan
         </button>
-        <button onClick={handleAddToCart} className="w-full px-4 py-2 rounded border border-border text-foreground text-sm hover:bg-muted transition-colors">
+        <button onClick={handleAddToCart} className="touch-btn w-full">
           Lägg i kundkorg & lägg till fler
         </button>
-        <button onClick={onCancel} className="w-full px-4 py-2 rounded text-destructive text-sm hover:bg-muted transition-colors">
+        <button onClick={onCancel} className="touch-btn w-full">
           Avbryt
         </button>
       </div>

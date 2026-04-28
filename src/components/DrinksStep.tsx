@@ -37,10 +37,10 @@ const DrinksStep = ({ availableIds, selected, noIce, onChange, onNoIceChange, on
           <button
             key={d.id}
             onClick={() => onChange(selected === d.id ? null : d.id)}
-            className={`w-full text-left px-3 py-2 rounded text-sm flex justify-between transition-colors ${
+            className={`w-full text-left px-3 py-2 rounded text-sm flex justify-between border-2 ${
               selected === d.id
-                ? "bg-selected text-selected-foreground"
-                : "bg-muted text-foreground hover:bg-accent"
+                ? "border-primary bg-selected text-selected-foreground"
+                : "border-border bg-card text-foreground"
             }`}
           >
             <span>{d.produkt}</span>
