@@ -1,5 +1,21 @@
 import menuData from "./menu.json";
 
+const productImageVersion = __PRODUCT_IMAGE_VERSION__;
+
+const withImageVersion = (imagePath: string) => {
+  if (!imagePath || imagePath.includes("v=")) {
+    return imagePath;
+  }
+
+  const [pathWithQuery, hash = ""] = imagePath.split("#");
+  const [path, existingQuery = ""] = pathWithQuery.split("?");
+  const query = existingQuery
+    ? `${existingQuery}&v=${encodeURIComponent(productImageVersion)}`
+    : `v=${encodeURIComponent(productImageVersion)}`;
+
+  return `${path}?${query}${hash ? `#${hash}` : ""}`;
+};
+
 export interface Anpassning {
   namn: string;
   visasVidRusning: boolean;
@@ -38,12 +54,17 @@ export interface RushHour {
 
 const raw = menuData as { config: { rushHours: RushHour[] }; products: Product[] };
 
+const productsWithVersionedImages = raw.products.map((product) => ({
+  ...product,
+  bild: withImageVersion(product.bild),
+}));
+
 export const rushHours: RushHour[] = raw.config?.rushHours ?? [];
 
 const sortBySorting = (a: Product, b: Product) => a.sorteringsordning - b.sorteringsordning;
 
 // All active products, sorted (regel 2 + 4)
-export const allProducts: Product[] = raw.products
+export const allProducts: Product[] = productsWithVersionedImages
   .filter((p) => p.aktiv)
   .sort(sortBySorting);
 

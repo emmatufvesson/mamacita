@@ -5,6 +5,9 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  define: {
+    __PRODUCT_IMAGE_VERSION__: JSON.stringify(`${mode}-${Date.now()}`),
+  },
   server: {
     host: "::",
     port: 8080,
