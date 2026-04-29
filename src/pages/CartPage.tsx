@@ -13,7 +13,7 @@ const CartPage = () => {
       <div className="min-h-screen flex flex-col bg-background">
         <div className="flex-1 flex flex-col items-center justify-center gap-4 p-6">
           <p className="text-muted-foreground text-lg">Din kundkorg är tom</p>
-          <button onClick={() => navigate("/")} className="touch-btn">Lägg till produkter</button>
+          <button onClick={() => navigate("/")} className="touch-btn touch-btn--primary">Lägg till produkter</button>
         </div>
         <Footer />
       </div>
@@ -37,7 +37,7 @@ const CartPage = () => {
                     <p className="font-semibold text-foreground">{item.productName}</p>
                     <p className="text-sm text-muted-foreground">{item.productPrice} kr</p>
                   </div>
-                  <button onClick={() => removeFromCart(index)} className="touch-btn !h-7 !w-7 !p-0">
+                  <button onClick={() => removeFromCart(index)} className="touch-btn touch-btn--destructive !h-7 !w-7 !p-0">
                     <Trash2 size={16} />
                   </button>
                 </div>
@@ -61,7 +61,7 @@ const CartPage = () => {
                   </p>
                 )}
 
-                <div className="flex items-center gap-3 mt-3">
+                <div className="flex items-center gap-4 mt-3">
                   <button
                     onClick={() => updateQuantity(index, item.quantity - 1)}
                     className="touch-btn !h-7 !w-7 !p-0"
@@ -90,16 +90,16 @@ const CartPage = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-2">
-          <button onClick={() => navigate("/checkout")} className="touch-btn w-full">
+        <div className="flex flex-col gap-4">
+          <button onClick={() => navigate("/checkout")} className="touch-btn touch-btn--primary w-full">
             Gå till betalning
           </button>
-          <button onClick={() => navigate("/")} className="touch-btn w-full">
+          <button onClick={() => navigate("/")} className="touch-btn touch-btn--primary w-full">
             Lägg till fler produkter
           </button>
           <button
             onClick={() => { clearCart(); navigate("/"); }}
-            className="touch-btn w-full"
+            className="touch-btn touch-btn--destructive w-full"
           >
             Avbryt beställning
           </button>

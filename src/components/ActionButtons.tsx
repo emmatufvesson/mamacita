@@ -6,24 +6,24 @@ interface ActionButtonsProps {
 }
 
 const ActionButtons = ({ onCustomize, onContinue, onCancel, hasSelection }: ActionButtonsProps) => (
-  <div className="flex gap-3 justify-center p-4">
+  <div className="flex gap-4 justify-center p-4">
     <button
       onClick={onCancel}
-      className="touch-btn"
+      className="touch-btn touch-btn--destructive"
     >
       Avbryt
     </button>
     <button
       disabled={!hasSelection}
       onClick={onCustomize}
-      className="touch-btn"
+      className="touch-btn touch-btn--outline"
     >
       Gör anpassningar
     </button>
     <button
       disabled={!hasSelection}
       onClick={onContinue}
-      className="touch-btn"
+      className="touch-btn touch-btn--primary"
     >
       Fortsätt
     </button>

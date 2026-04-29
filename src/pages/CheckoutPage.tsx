@@ -35,7 +35,7 @@ const CheckoutPage = () => {
           <p className="text-muted-foreground">Din order beräknas ta ca 10 minuter</p>
           <p className="text-xl font-semibold text-foreground">Ditt ordernr är #{orderNumber}</p>
           <p className="text-muted-foreground italic">Smaklig måltid och varmt välkommen åter</p>
-          <button onClick={() => navigate("/")} className="touch-btn mt-4">
+          <button onClick={() => navigate("/")} className="touch-btn touch-btn--primary mt-4">
             Tillbaka till menyn
           </button>
         </div>
@@ -89,11 +89,11 @@ const CheckoutPage = () => {
           />
         </div>
 
-        <div className="flex flex-col gap-2">
-          <button onClick={handlePay} className="touch-btn w-full">
+        <div className="flex flex-col gap-4">
+          <button onClick={handlePay} className="touch-btn touch-btn--primary w-full">
             Betala {cartTotal} kr
           </button>
-          <button onClick={() => navigate("/cart")} className="touch-btn w-full">
+          <button onClick={() => navigate("/cart")} className="touch-btn touch-btn--outline w-full">
             Tillbaka till kundkorgen
           </button>
         </div>

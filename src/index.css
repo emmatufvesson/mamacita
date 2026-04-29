@@ -78,6 +78,21 @@ All colors MUST be HSL.
   .touch-btn {
     @apply inline-flex items-center justify-center rounded-lg border-2 border-primary bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground;
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Modifier variants for touch buttons */
+  .touch-btn--primary {
+    @apply border-primary bg-primary text-primary-foreground;
+  }
+
+  .touch-btn--outline {
+    @apply border border-input bg-background text-foreground;
+  }
+
+  .touch-btn--destructive {
+    @apply border-destructive bg-destructive text-destructive-foreground;
   }
 
   .touch-btn:disabled {
