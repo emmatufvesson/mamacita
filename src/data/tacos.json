@@ -1,0 +1,393 @@
+{
+  "config": {
+    "rushHours": [
+      { "start": "11:00", "end": "13:00" },
+      { "start": "16:30", "end": "18:30" }
+    ]
+  },
+  "products": [
+
+    {
+      "id": "taco_classic_beef",
+      "produkt": "Classic Beef Taco",
+      "produktPris": 75,
+      "kundKategori": "tacos",
+      "station": "grill",
+      "tillagningstid": 8,
+      "beskrivning": "Taco med kryddig nötfärs, salsa och lök.",
+      "sorteringsordning": 1,
+      "bild": "/produktbilder_tacos/Classic Beef Taco.jpg",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        { "namn": "utan salsa", "visasVidRusning": false },
+        { "namn": "utan lök", "visasVidRusning": true },
+        { "namn": "glutenfritt tortillabröd", "visasVidRusning": true }
+      ],
+      "tillägg": [
+        { "namn": "extra kött", "pris": 20, "visasVidRusning": false },
+        { "namn": "extra ost", "pris": 10, "visasVidRusning": false },
+        { "namn": "extra guacamole", "pris": 15, "visasVidRusning": false }
+      ],
+      "tillvalTillbehor": [
+        "side_nachos",
+        "side_sallad",
+        "side_guacamole",
+        "side_chimichurri",
+        "side_vitlokssas"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": ["gluten", "lök"],
+      "ingredienser": ["tortilla", "nötfärs", "salsa", "lök"]
+    },
+
+    {
+      "id": "taco_grande_beef",
+      "produkt": "Grande Beef Taco",
+      "produktPris": 89,
+      "kundKategori": "tacos",
+      "station": "grill",
+      "tillagningstid": 10,
+      "beskrivning": "Större premiumtaco med nötfärs, ost, salsa och lök.",
+      "sorteringsordning": 2,
+      "bild": "/produktbilder_tacos/Grande Beef Taco.jpg",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        { "namn": "utan ost", "visasVidRusning": false },
+        { "namn": "utan salsa", "visasVidRusning": false },
+        { "namn": "utan lök", "visasVidRusning": true },
+        { "namn": "glutenfritt tortillabröd", "visasVidRusning": true }
+      ],
+      "tillägg": [
+        { "namn": "extra kött", "pris": 20, "visasVidRusning": false },
+        { "namn": "extra ost", "pris": 10, "visasVidRusning": false },
+        { "namn": "extra guacamole", "pris": 15, "visasVidRusning": false }
+      ],
+      "tillvalTillbehor": [
+        "side_nachos",
+        "side_sallad",
+        "side_guacamole",
+        "side_chimichurri",
+        "side_vitlokssas"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": ["gluten", "laktos", "lök"],
+      "ingredienser": ["tortilla", "nötfärs", "ost", "salsa", "lök"]
+    },
+
+    {
+      "id": "taco_cheese_beef",
+      "produkt": "Cheesy Beef Taco",
+      "produktPris": 75,
+      "kundKategori": "tacos",
+      "station": "grill",
+      "tillagningstid": 8,
+      "beskrivning": "Taco med nötfärs, ost, salsa och lök.",
+      "sorteringsordning": 3,
+      "bild": "/produktbilder_tacos/Cheesy Beef Taco.jpg",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        { "namn": "utan ost", "visasVidRusning": false },
+        { "namn": "utan salsa", "visasVidRusning": false },
+        { "namn": "utan lök", "visasVidRusning": true },
+        { "namn": "glutenfritt tortillabröd", "visasVidRusning": true }
+      ],
+      "tillägg": [
+        { "namn": "extra kött", "pris": 20, "visasVidRusning": false },
+        { "namn": "extra ost", "pris": 10, "visasVidRusning": false },
+        { "namn": "extra guacamole", "pris": 15, "visasVidRusning": false }
+      ],
+      "tillvalTillbehor": [
+        "side_nachos",
+        "side_sallad",
+        "side_guacamole",
+        "side_chimichurri",
+        "side_vitlokssas"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": ["gluten", "laktos", "lök"],
+      "ingredienser": ["tortilla", "nötfärs", "ost", "salsa", "lök"]
+    },
+
+    {
+      "id": "taco_crispy_chicken",
+      "produkt": "Crispy Chicken Taco",
+      "produktPris": 75,
+      "kundKategori": "tillbehör",
+      "station": "tillbehör",
+      "tillagningstid": 7,
+      "beskrivning": "Taco med krispig kyckling, salsa och lök.",
+      "sorteringsordning": 4,
+      "bild": "/produktbilder_tacos/Crispy Chicken Taco.jpg",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        { "namn": "utan salsa", "visasVidRusning": false },
+        { "namn": "utan lök", "visasVidRusning": true },
+        { "namn": "glutenfritt tortillabröd", "visasVidRusning": true }
+      ],
+      "tillägg": [
+        { "namn": "extra kyckling", "pris": 20, "visasVidRusning": false }
+      ],
+      "tillvalTillbehor": [
+        "side_nachos",
+        "side_sallad",
+        "side_guacamole",
+        "side_chimichurri",
+        "side_vitlokssas"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": ["gluten", "lök"],
+      "ingredienser": ["tortilla", "kyckling", "salsa", "lök"]
+    },
+
+    {
+      "id": "taco_halloumi",
+      "produkt": "Halloumi Taco",
+      "produktPris": 75,
+      "kundKategori": "tacos",
+      "station": "tillbehör",
+      "tillagningstid": 7,
+      "beskrivning": "Vegetarisk taco med halloumi, salsa och lök.",
+      "sorteringsordning": 5,
+      "bild": "/produktbilder_tacos/Halloumi Taco.jpg",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        { "namn": "utan salsa", "visasVidRusning": false },
+        { "namn": "utan lök", "visasVidRusning": true },
+        { "namn": "glutenfritt tortillabröd", "visasVidRusning": true }
+      ],
+      "tillägg": [
+        { "namn": "extra ost", "pris": 10, "visasVidRusning": false },
+        { "namn": "extra halloumi", "pris": 15, "visasVidRusning": false }
+      ],
+      "tillvalTillbehor": [
+        "side_nachos",
+        "side_sallad",
+        "side_guacamole",
+        "side_chimichurri",
+        "side_vitlokssas"
+      ],
+      "tillvalDryck": [
+        "drink_cola",
+        "drink_fanta",
+        "drink_sprite",
+        "drink_ramlosa"
+      ],
+      "allergener": ["gluten", "laktos", "lök"],
+      "ingredienser": ["tortilla", "halloumi", "salsa", "lök"]
+    },
+
+    {
+      "id": "side_nachos",
+      "produkt": "Nachos",
+      "produktPris": 20,
+      "kundKategori": "tillbehör",
+      "station": "tillbehör",
+      "tillagningstid": 0,
+      "beskrivning": "Krispiga nachochips.",
+      "sorteringsordning": 1,
+      "bild": "/produktbilder_tacos/Nachos.jpg",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": ["majs"],
+      "ingredienser": ["majs", "olja", "salt"]
+    },
+
+    {
+      "id": "side_sallad",
+      "produkt": "Grön Sallad",
+      "produktPris": 20,
+      "kundKategori": "tillbehör",
+      "station": "tillbehör",
+      "tillagningstid": 0,
+      "beskrivning": "Fräsch sallad som serveras direkt.",
+      "sorteringsordning": 2,
+      "bild": "/produktbilder_tacos/grön sallad.jpg",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": ["salladsmix", "grönsaker"]
+    },
+
+    {
+      "id": "side_guacamole",
+      "produkt": "Guacamole",
+      "produktPris": 15,
+      "kundKategori": "tillbehör",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Krämig guacamole.",
+      "sorteringsordning": 3,
+      "bild": "/produktbilder_tacos/Guacamole.jpg",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": ["avokado", "lime", "salt"]
+    },
+
+    {
+      "id": "side_chimichurri",
+      "produkt": "Chimichurri",
+      "produktPris": 15,
+      "kundKategori": "tillbehör",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Frisk örtig chimichurri.",
+      "sorteringsordning": 4,
+      "bild": "/produktbilder_tacos/chimichurri.jpg",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": ["persilja", "olja", "vitlök", "vinäger"]
+    },
+
+    {
+      "id": "side_vitlokssas",
+      "produkt": "Vitlökssås",
+      "produktPris": 10,
+      "kundKategori": "tillbehör",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Krämig vitlökssås.",
+      "sorteringsordning": 5,
+      "bild": "/produktbilder_tacos/Vitlökssås.jpg",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": ["laktos"],
+      "ingredienser": ["yoghurt", "vitlök", "olja"]
+    },
+
+    {
+      "id": "drink_cola",
+      "produkt": "Cola",
+      "produktPris": 15,
+      "kundKategori": "dryck",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Coladryck.",
+      "sorteringsordning": 1,
+      "bild": "/produktbilder_tacos/06_coca-cola_1x1_512.jpg",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        { "namn": "utan is", "visasVidRusning": false }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": ["läskkoncentrat", "kolsyrat vatten"]
+    },
+
+    {
+      "id": "drink_fanta",
+      "produkt": "Fanta",
+      "produktPris": 15,
+      "kundKategori": "dryck",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Apelsinläsk.",
+      "sorteringsordning": 2,
+      "bild": "/produktbilder_tacos/07_fanta_1x1_512.jpg",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        { "namn": "utan is", "visasVidRusning": false }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": ["läskkoncentrat", "kolsyrat vatten"]
+    },
+
+    {
+      "id": "drink_sprite",
+      "produkt": "Sprite",
+      "produktPris": 15,
+      "kundKategori": "dryck",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Citrusläsk.",
+      "sorteringsordning": 3,
+      "bild": "/produktbilder_tacos/08_sprite_1x1_512.jpg",
+      "aktiv": true,
+      "aktivRusning": false,
+      "anpassningar": [
+        { "namn": "utan is", "visasVidRusning": false }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": ["läskkoncentrat", "kolsyrat vatten"]
+    },
+
+    {
+      "id": "drink_ramlosa",
+      "produkt": "Ramlösa",
+      "produktPris": 15,
+      "kundKategori": "dryck",
+      "station": "servering",
+      "tillagningstid": 0,
+      "beskrivning": "Kolsyrat vatten.",
+      "sorteringsordning": 4,
+      "bild": "/produktbilder_tacos/09_ramlosa_1x1_512.jpg",
+      "aktiv": true,
+      "aktivRusning": true,
+      "anpassningar": [
+        { "namn": "utan is", "visasVidRusning": false }
+      ],
+      "tillägg": [],
+      "tillvalTillbehor": [],
+      "tillvalDryck": [],
+      "allergener": [],
+      "ingredienser": ["kolsyrat vatten"]
+    }
+
+  ]
+}

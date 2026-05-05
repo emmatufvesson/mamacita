@@ -1,4 +1,5 @@
 import { NavLink } from "@/components/NavLink";
+import { Button } from "@/components/ui/button";
 
 const navItems = [
   { to: "/", label: "Meny" },
@@ -10,11 +11,30 @@ const navItems = [
   { to: "/pickup", label: "Pickup" },
 ];
 
-const Header = () => (
+interface HeaderProps {
+  activeRestaurant?: string;
+  onChangeRestaurant?: () => void;
+}
+
+const Header = ({ activeRestaurant, onChangeRestaurant }: HeaderProps) => (
   <header className="bg-header text-header-foreground border-b border-white/10">
-    <div className="py-6 text-center">
-      <h1 className="text-2xl font-bold tracking-wide">BUTCHERS BURGERS</h1>
-      <p className="text-sm mt-1 opacity-75">Handgjorda burgare sedan 2024</p>
+    <div className="py-6 text-center space-y-3">
+      <div>
+        <h1 className="text-2xl font-bold tracking-wide">MFFO</h1>
+        <p className="text-sm mt-1 opacity-75">Digital ordering platform</p>
+      </div>
+      {activeRestaurant && (
+        <div className="flex items-center justify-center gap-3">
+          <span className="rounded-full border border-white/20 px-3 py-1 text-xs uppercase tracking-[0.2em] opacity-90">
+            {activeRestaurant}
+          </span>
+          {onChangeRestaurant && (
+            <Button type="button" variant="outline" size="sm" onClick={onChangeRestaurant} className="text-black">
+              Byt restaurang
+            </Button>
+          )}
+        </div>
+      )}
     </div>
     <nav className="border-t border-white/10 bg-black/10 px-3 py-3">
       <div className="flex flex-wrap justify-center gap-2 max-w-6xl mx-auto">

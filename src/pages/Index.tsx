@@ -8,12 +8,12 @@ import ExtrasStep from "@/components/ExtrasStep";
 import SidesStep from "@/components/SidesStep";
 import DrinksStep from "@/components/DrinksStep";
 import OrderSummary from "@/components/OrderSummary";
-import { findProduct, CustomerCategory } from "@/data/menu";
+import { categories, findProduct, CustomerCategory } from "@/data/menu";
 import { isRushNow } from "@/lib/rush";
 import { OrderItem, OrderStep } from "@/types/order";
 
 const Index = () => {
-  const [category, setCategory] = useState<CustomerCategory>("Burgare");
+  const [category, setCategory] = useState<CustomerCategory>(() => categories[0] ?? "Burgare");
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
   const [step, setStep] = useState<OrderStep>("select");
 
@@ -34,7 +34,7 @@ const Index = () => {
   }, []);
 
   const selectedProduct = findProduct(selectedProductId);
-  const isBurger = selectedProduct?.kundKategori === "burgare";
+  const isMainProduct = selectedProduct?.station === "grill";
 
   const computeTotal = (o: OrderItem): number => {
     const product = findProduct(o.productId);
@@ -90,7 +90,7 @@ const Index = () => {
   // Decide what comes next after "select"
   const handleContinueFromSelect = () => {
     if (!selectedProduct) return;
-    if (isBurger) {
+    if (isMainProduct) {
       setStep("extras");
     } else {
       // Tillbehör/dryck: hoppa direkt till summary
@@ -239,7 +239,7 @@ const Index = () => {
           )}
           <ActionButtons
             hasSelection={!!selectedProductId}
-            onCustomize={isBurger ? handleCustomize : () => {}}
+            onCustomize={isMainProduct ? handleCustomize : () => {}}
             onContinue={handleContinueFromSelect}
             onCancel={resetAll}
           />
