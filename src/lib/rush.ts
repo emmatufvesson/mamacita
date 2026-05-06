@@ -14,6 +14,10 @@ export const isRushNow = (now: Date = new Date(), windows: RushHour[] = rushHour
   return windows.some((w) => {
     const s = toMinutes(w.start);
     const e = toMinutes(w.end);
-    return cur >= s && cur < e;
+    if (s <= e) {
+      return cur >= s && cur < e;
+    }
+
+    return cur >= s || cur < e;
   });
 };
